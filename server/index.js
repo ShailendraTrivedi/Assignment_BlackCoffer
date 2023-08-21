@@ -3,6 +3,7 @@ const express = require("express");
 const fetchRouter = require("./routers/fetchData.routers");
 const fetchByType = require("./routers/fetchByType.routers");
 const cors = require("cors");
+const PORT = process.env.PORT || 5000;
 require("dotenv").config();
 const app = express();
 
@@ -27,9 +28,9 @@ mongoose
 
 /** SERVER CONNECTION */
 try {
-  app.listen(5000, () => {
+  app.listen(PORT, () => {
     console.log(
-      "Server is connected successfully on PORT: 'http://localhost:5000'"
+      `Server is connected successfully on PORT: http://localhost:${PORT}`
     );
   });
 } catch (error) {
