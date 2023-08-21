@@ -25,18 +25,19 @@ const Main = () => {
   const [chartFilter, setChartFilter] = useState("start_year");
   const [popUp, setPopUp] = useState(false);
   const [dataModel, setDataModel] = useState();
+
   useEffect(() => {
     dispatch(fetchAction());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchTypeAction({ selectFilter, inputValue }));
-  }, [selectFilter, inputValue]);
+  }, [dispatch, selectFilter, inputValue]);
 
   useEffect(() => {
     const filterOut = getAllDataFromStore.data.map((item) => item[chartFilter]);
     setShowFilteredOutput(filterOut);
-  }, [getAllDataFromStore,chartFilter]);
+  }, [getAllDataFromStore, chartFilter]);
 
   return (
     <>

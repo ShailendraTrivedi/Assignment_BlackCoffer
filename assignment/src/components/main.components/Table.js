@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Table = ({ setPopUp, showFilteredOuptput, setDataModel }) => {
   const handlePopUp = (item) => {
