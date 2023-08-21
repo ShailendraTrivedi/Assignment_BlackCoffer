@@ -1,0 +1,16 @@
+.sidenavbar {
+  width: 20rem;
+  /* background: black; */
+  @apply fixed z-40 min-h-screen flex flex-col border-r-2 border-gray-500 p-5 gap-10;
+}
+.list {
+  @apply flex justify-between w-full p-2 rounded;
+  transition: all;
+  transition-duration: 500ms;
+}
+.list:hover {
+  @apply bg-violet-900 hover:text-white;
+}
+.onechar {
+  @apply font-serif font-extrabold text-4xl bg-violet-900 rounded-full h-12 w-12 flex justify-center items-center text-white cursor-pointer;
+}

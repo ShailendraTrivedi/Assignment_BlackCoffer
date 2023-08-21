@@ -1,0 +1,4 @@
+assignment/node_modules
+server/node_modules
+assignment/src/API.js
+server/.env
